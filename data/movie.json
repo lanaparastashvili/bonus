@@ -1,0 +1,136 @@
+{
+    "sliderMovies": [
+        {
+            "title": "after the rain",
+            "rating": "9.3",
+            "year": "2011-2019",
+            "genre": "Fantasy",
+            "image": "../img/after the rain.png"
+        },
+        {
+            "title": "zehar",
+            "rating": "8.1",
+            "year": "2024",
+            "genre": "Drama",
+            "gradient": "..img/5.png",
+            "image": "../img/zehar.png"
+        },
+        {
+            "title": "",
+            "rating": "7.8",
+            "year": "2024",
+            "genre": "Romance",
+            "image": "../img/1bet.png"
+        },
+        {
+            "title": "lion king",
+            "rating": "6.8",
+            "year": "2024",
+            "genre": "Horror",
+            "image": "../img/5.png"
+        },
+          {
+            "title": "godzila",
+            "rating": "8.8",
+            "year": "2024",
+            "genre": "Sci-Fi",
+           
+            "image": "../img/6.png"
+        },
+          {
+            "title": "spirited away",
+            "rating": "8.8",
+            "year": "2024",
+            "genre": "Sci-Fi",
+           
+            "image": "../img/away.jpg"
+        },
+        {
+            "title": "bergen",
+            "rating": "8.8",
+            "year": "2024",
+            "genre": "Sci-Fi",
+           
+            "image": "../img/8.png"
+        },
+        {
+            "title": "news world",
+            "rating": "8.7",
+            "year": "2024",
+            "genre": "Action",
+          
+            "image": "../img/new.jpg"
+        },
+        {
+            "title": "grey's anatomy",
+            "rating": "8.8",
+            "year": "2010",
+            "genre": "Thriller",
+           
+            "image": "../img/grey.png"
+        }
+
+    ],
+    "continueMovies": [
+        {
+            "title": "",
+            "rating": "9.3",
+            "image": "../img/king.png"
+        },
+        {
+            "title": "",
+            "rating": "8.1",
+           
+            "image": "../img/vikings.png"
+        },
+        {
+            "title": "",
+            "rating": "7.8",
+          
+            "image": "../img/zehara.png"
+        },
+        {
+            "title": "",
+            "rating": "6.8",
+           
+            "image": "../img/greys.png"
+        },
+        {
+            "title": "",
+            "rating": "8.8",
+           
+            "image": "../img/bergen.png"
+        },
+        {
+            "title": "",
+            "rating": "7.2",
+            
+            "image": "../img/cou.png"
+        },
+        {
+            "title": "",
+            "rating": "8.7",
+            "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
+            "image": "../img/marksman.png"
+        },
+            {
+            "title": "Spider-Man",
+            "rating": "8.7",
+            "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
+            "image": "../img/wana.png"
+        },
+        {
+            "title": "",
+            "rating": "7.4",
+          
+            "image": "../img/batman.png"
+        },
+        {
+            "title": "",
+            "rating": "9.3",
+            "year": "2011-2019",
+            "genre": "Fantasy",
+            "image": "../img/titan.png"
+        }
+    ]
+}
