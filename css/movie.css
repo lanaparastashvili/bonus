@@ -477,7 +477,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Background Overlay for Dynamic Hero */
 #dynamic-bg {
     position: fixed;
     top: 0;
@@ -548,7 +547,7 @@ body {
     font-size: 18px;
 }
 
-/* Hero Carousel Section */
+
 .hero-section {
     height: 80vh;
     display: flex;
@@ -584,7 +583,6 @@ body {
     opacity: 0.7;
 }
 
-/* Active State Scaling */
 .movie-card.active {
     min-width: 300px;
     height: 450px;
@@ -617,7 +615,6 @@ body {
     margin-top: 10px;
 }
 
-/* Standard Grid */
 .container {
     padding: 40px 50px;
 }
@@ -662,7 +659,6 @@ body {
     margin: 0;
 }
 
-/* Split Screen Layout - Redesigned */
 .split-container {
     display: flex;
     height: 100vh;
@@ -671,7 +667,7 @@ body {
     background: #000;
 }
 
-/* Poster Side (Left) */
+
 .poster-side {
     flex: 1;
     position: relative;
@@ -702,7 +698,7 @@ body {
     color: #fff;
 }
 
-/* Booking Side (Right) */
+
 .booking-side {
     flex: 0.8;
     background: #111;
@@ -742,7 +738,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Date Selector - Circular */
 #dateSelector .pill {
     width: 45px;
     height: 45px;
@@ -770,7 +765,6 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Time Selector - Pill Shape */
 #timeSelector .pill {
     padding: 10px 25px;
     border-radius: 30px;
@@ -800,7 +794,7 @@ body {
     width: 100%;
 }
 
-/* Seats Area */
+
 .seats-area {
     margin-top: 10px;
     display: flex;
@@ -863,7 +857,7 @@ body {
     box-shadow: none;
 }
 
-/* Legend */
+
 .legend {
     display: flex;
     gap: 25px;
@@ -890,7 +884,7 @@ body {
     transform: none;
 }
 
-/* Booking Action */
+
 .booking-action {
     display: flex;
     justify-content: space-between;
@@ -945,7 +939,7 @@ body {
     box-shadow: none;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
     .split-container {
         flex-direction: column;
@@ -969,7 +963,6 @@ body {
     }
 }
 
-/* Checkout Form & Success (Restored) */
 .checkout-form {
     max-width: 500px;
     margin: 0 auto;
@@ -1014,560 +1007,4 @@ body {
     .hero-section {
         height: 60vh;
     }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 40px;
-}
-.poster-container {
-  display: flex;
-  position: absolute;
-  width: 708px;
-  height: 940px;
-  align-items: flex-start;
-  left: 50%;
-  transform: translateX(-136%);
-  z-index: -1;
-}
-.movie-duration {
-  position: absolute;
-  width: 226px;
-  height: 41px;
-  top: 170px;
-  left: 101px;
-  text-decoration: bold;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-}
-.line {
-  position: absolute;
-  width: 223px;
-  height: 1px;
-  top: 209px;
-  left: 101px;
-  background-color: #ab0a10;
-}
-.poster-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../img/spirit.jpg");
-  background-position: center;
-  width: 708px;
-}
-
-.logo {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  z-index: 10;
-}
-
-.container {
-  max-width: 700px;
-  height: 940px;
-  width: 100%;
-  position: absolute;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  left: 50%;
-  transform: translateX(10%);
-}
-
-.user-icon {
-  text-align: right;
-  margin-bottom: 30px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #888;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.date-selector,
-.time-selector {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.pill {
-  background: #2a2a2a;
-  color: #aaa;
-  padding: 12px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 14px;
-  border: 2px solid transparent;
-  min-width: 50px;
-  text-align: center;
-}
-
-.pill:hover {
-  background: #3a3a3a;
-  color: #fff;
-}
-
-.pill.active {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-.divider {
-  height: 1px;
-  background: #333;
-  margin: 30px 0;
-}
-
-.screen {
-  background: linear-gradient(
-    to bottom,
-    rgba(139, 0, 0, 0.3),
-    rgba(139, 0, 0, 0.1)
-  );
-  height: 30px;
-  border-radius: 60% 60% 0 0;
-  margin: 30px auto 40px;
-  max-width: 400px;
-  box-shadow: 0 0 20px rgba(139, 0, 0, 0.3);
-}
-
-.seats-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 30px;
-}
-
-.seat-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.row-label {
-  width: 25px;
-  text-align: center;
-  font-size: 12px;
-  color: #666;
-  font-weight: 500;
-}
-
-.seat {
-  width: 19px;
-  height: 19px;
-  background: #4a4a4a;
-  border-radius: 6px 6px 2px 2px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-  border-radius: 20px;
-}
-
-.seat:hover:not(.booked) {
-  background: #6a6a6a;
-  transform: scale(1.1);
-}
-
-.seat.booked {
-  background: #2a2a2a;
-  cursor: not-allowed;
-}
-
-.seat.selected {
-  background: #8b0000;
-  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
-}
-
-.legend {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  color: #aaa;
-}
-
-.legend-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-}
-
-.legend-dot.available {
-  background: #4a4a4a;
-}
-
-.legend-dot.booked {
-  background: #2a2a2a;
-}
-
-.legend-dot.selected {
-  background: #8b0000;
-}
-
-.booking-info {
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px;
-  background: #1a1a1a;
-  border-radius: 15px;
-}
-
-.selected-seats {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 10px;
-}
-
-.poster-container {
-  display: flex;
-  position: absolute;
-  width: 708px;
-  height: 940px;
-  align-items: flex-start;
-  left: 50%;
-  transform: translateX(-136%);
-  z-index: -1;
-}
-
-.movie-duration {
-  position: absolute;
-  width: 226px;
-  height: 41px;
-  top: 170px;
-  left: 101px;
-  text-decoration: bold;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.line {
-  position: absolute;
-  width: 223px;
-  height: 1px;
-  top: 209px;
-  left: 101px;
-  background-color: #ab0a10;
-}
-
-.poster-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../img/spirit.jpg");
-  background-position: center;
-}
-
-.logo {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  z-index: 10;
-}
-
-.container {
-  max-width: 700px;
-  height: 940px;
-  width: 100%;
-  position: absolute;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  left: 50%;
-  transform: translateX(10%);
-}
-
-.user-icon {
-  text-align: right;
-  margin-bottom: 30px;
-  font-size: 20px;
-  cursor: pointer;
-  color: #888;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.date-selector,
-.time-selector {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-  flex-wrap: wrap;
-}
-
-.pill {
-  background: #2a2a2a;
-  color: #aaa;
-  padding: 12px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 14px;
-  border: 2px solid transparent;
-  min-width: 50px;
-  text-align: center;
-}
-
-.pill:hover {
-  background: #3a3a3a;
-  color: #fff;
-}
-
-.pill.active {
-  background: #fff;
-  color: #000;
-  border-color: #fff;
-}
-
-.divider {
-  height: 1px;
-  background: #333;
-  margin: 30px 0;
-}
-
-.screen {
-  background: linear-gradient(to bottom,
-      rgba(139, 0, 0, 0.3),
-      rgba(139, 0, 0, 0.1));
-  height: 30px;
-  border-radius: 60% 60% 0 0;
-  margin: 30px auto 40px;
-  max-width: 400px;
-  box-shadow: 0 0 20px rgba(139, 0, 0, 0.3);
-}
-
-.seats-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 30px;
-}
-
-.seat-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-}
-
-.row-label {
-  width: 25px;
-  text-align: center;
-  font-size: 12px;
-  color: #666;
-  font-weight: 500;
-}
-
-.seat {
-  width: 19px;
-  height: 19px;
-  background: #4a4a4a;
-  border-radius: 6px 6px 2px 2px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-  border-radius: 20px;
-}
-
-.seat:hover:not(.booked) {
-  background: #6a6a6a;
-  transform: scale(1.1);
-}
-
-.seat.booked {
-  background: #2a2a2a;
-  cursor: not-allowed;
-}
-
-.seat.selected {
-  background: #8b0000;
-  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
-}
-
-.legend {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  color: #aaa;
-}
-
-.legend-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-}
-
-.legend-dot.available {
-  background: #4a4a4a;
-}
-
-.legend-dot.booked {
-  background: #2a2a2a;
-}
-
-.legend-dot.selected {
-  background: #8b0000;
-}
-
-.booking-info {
-  text-align: center;
-  margin-top: 30px;
-  padding: 20px;
-  background: #1a1a1a;
-  border-radius: 15px;
-}
-
-.selected-seats {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 10px;
-}
-
-.container1 {
-  position: absolute;
-  top: 30%;
-  left: 40%;
-  transform: translateX(-290%);
-  width: 409px;
-  height: 524px;
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 40px;
-  background: #0a0a0a;
-  border-radius: 12px;
-  z-index: 100;
-}
-
-h1 {
-  text-align: center;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
-  color: #999;
-}
-
-.selected-seats {
-  background: #0a0a0a;
-  border-radius: 0;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.seat-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 20px;
-}
-
-.seat-info {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.seat-icon {
-  width: 12px;
-  height: 12px;
-  background: #666;
-  border-radius: 50%;
-}
-
-.seat-text {
-  font-size: 15px;
-  color: #fff;
-}
-
-.seat-price {
-  font-size: 15px;
-  color: #fff;
-  margin-right: 15px;
-}
-
-.remove-btn {
-  background: none;
-  border: none;
-  color: #666;
-  cursor: pointer;
-  font-size: 20px;
-  padding: 0;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s;
-}
-
-.remove-btn:hover {
-  color: #999;
-}
-
-.purchase-btn {
-  width: 100%;
-  background: #8b1818;
-  color: #fff;
-  border: none;
-  padding: 18px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  margin-bottom: 15px;
-}
-
-.purchase-btn:hover {
-  background: #a01d1d;
-}
-
-.timer {
-  text-align: center;
-  color: #666;
-  font-size: 13px;
 }

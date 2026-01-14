@@ -2,7 +2,7 @@ let sliderMovies = [];
 let continueMovies = [];
 let currentIndex = 0;
 
-// ელემენტები
+
 const sliderTrack = document.getElementById('sliderTrack');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -10,7 +10,7 @@ const continueGrid = document.getElementById('continueGrid');
 const backgroundOverlay = document.getElementById('backgroundOverlay');
 const themeToggle = document.getElementById('themeToggle');
 
-// JSON წამოღება
+
 fetch('../data/movie.json')
   .then(res => res.json())
   .then(data => {
@@ -20,7 +20,6 @@ fetch('../data/movie.json')
   })
   .catch(err => console.error('JSON load error:', err));
 
-// Slide შექმნა
 function createMovieSlide(movie, index) {
     const slide = document.createElement('div');
     slide.className = 'movie-slide';
@@ -38,7 +37,7 @@ function createMovieSlide(movie, index) {
     `;
     slide.dataset.index = index;
 
-    // Hover-ზე background-ზე გადიდება
+ 
     slide.addEventListener('mouseenter', () => {
         currentIndex = index;
         updateSlider();
@@ -47,7 +46,6 @@ function createMovieSlide(movie, index) {
     return slide;
 }
 
-// Background განახლება
 function updateBackground(movie) {
     backgroundOverlay.style.backgroundImage = `url('${movie.image}')`;
     backgroundOverlay.style.backgroundSize = 'cover';
@@ -55,7 +53,7 @@ function updateBackground(movie) {
     backgroundOverlay.style.transition = 'background 0.5s ease-in-out';
 }
 
-// Continue movies ბარათები
+
 function createMovieCard(movie) {
     return `
         <div class="movie-card">
@@ -67,7 +65,6 @@ function createMovieCard(movie) {
     `;
 }
 
-// Render slider + continue movies
 function renderAll() {
     sliderTrack.innerHTML = '';
     sliderMovies.forEach((movie, index) => {
