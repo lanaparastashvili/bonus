@@ -22,6 +22,18 @@
         </nav>
        
     </section>
+    <section class="filter-section">
+    <div class="filter-container">
+        <input type="text" id="movieSearch" placeholder="Search movies...">
+        <select id="genreSelect">
+            <option value="all">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Drama">Drama</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Animation">Animation</option>
+            </select>
+    </div>
+</section>
 
     <section class="slider-section">
         <div class="slider-container">
@@ -76,6 +88,13 @@
             </div>
         </div>
     </footer>
+    <div id="movieModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modalBody">
+            </div>
+    </div>
+</div>
     <script src="../js/movie.js"></script>
 </body>
 

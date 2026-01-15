@@ -7,8 +7,19 @@ let selectedTime = null;
 let selectedSeats = [];
 let bookedSeats = [];
 let currentSessionId = null;
+let movieTitle = ""; // ✅ ახალი
 
 async function loadData() {
+    // ✅ URL-დან movie title-ის წაკითხვა
+    const urlParams = new URLSearchParams(window.location.search);
+    movieTitle = urlParams.get('movie') || 'Unknown Movie';
+    
+    // Movie title-ის გამოჩენა (თუ გაქვთ HTML-ში <h1 id="movieTitle"></h1>)
+    const movieTitleElement = document.getElementById('movieTitle');
+    if (movieTitleElement) {
+        movieTitleElement.textContent = movieTitle;
+    }
+
     try {
         const response = await fetch('../data/sessions.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -31,7 +42,6 @@ async function loadData() {
             pricePerSeat = firstSession.price;
             currentSessionId = firstSession.id;
 
-            
             bookedSeats = getMockBookedSeats(currentSessionId);
         }
 
@@ -97,7 +107,6 @@ function renderSelectors() {
     const availableDates = Object.keys(groupedSessions);
     availableDates.forEach(date => {
         const pill = document.createElement('div');
-       
         const day = date.split('-')[2];
         pill.className = `pill ${date === selectedDate ? 'active' : ''}`;
         pill.textContent = day;
@@ -239,6 +248,28 @@ function updateBookingInfo() {
 
     const total = selectedSeats.length * pricePerSeat;
     purchaseBtn.textContent = `Purchase (${total}$)`;
+    
+    // ✅ Purchase ღილაკს დაემატება onclick
+    purchaseBtn.onclick = checkout;
+}
+
+// ✅ Checkout ფუნქცია
+function checkout() {
+    if (selectedSeats.length === 0) {
+        alert("Please select at least one seat!");
+        return;
+    }
+    
+    const params = new URLSearchParams({
+        movie: movieTitle,
+        date: selectedDate,
+        time: selectedTime,
+        seats: selectedSeats.join(','),
+        price: pricePerSeat,
+        total: selectedSeats.length * pricePerSeat
+    });
+    
+    window.location.href = `checkout.html?${params.toString()}`;
 }
 
 let timeLeft = 600 + 15;
@@ -257,5 +288,26 @@ function startTimer() {
     }, 1000);
 }
 
+
 loadData();
 startTimer();
+const openBtn = document.getElementById('openCheckout');
+const container = document.getElementById('modalContainer');
+
+openBtn.addEventListener('click', async () => {
+    const res = await fetch('checkout.html');
+    const html = await res.text();
+
+    container.innerHTML = html;
+    document.body.style.overflow = 'hidden';
+});
+
+container.addEventListener('click', (e) => {
+    if (
+        e.target.classList.contains('overlay') ||
+        e.target.classList.contains('close-btn')
+    ) {
+        container.innerHTML = '';
+        document.body.style.overflow = '';
+    }
+});

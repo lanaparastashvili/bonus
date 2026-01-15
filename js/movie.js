@@ -59,7 +59,7 @@ function createMovieCard(movie) {
         <div class="movie-card">
             <div class="movie-card-poster" style="background-image: url('${movie.image}')">
                 <span class="card-rating">⭐ ${movie.rating}</span>
-                ${movie.title}
+                
             </div>
         </div>
     `;
@@ -98,4 +98,60 @@ themeToggle.addEventListener('click', () => {
     const theme = document.body.getAttribute('data-theme');
     document.body.setAttribute('data-theme', theme === 'dark' ? 'light' : 'dark');
 });
+function bookMovie(title) {
+    window.location.href = `seats.html?movie=${encodeURIComponent(title)}`;
+}
+// 1. ცვლადები ფილტრებისთვის (დაამატეთ სხვების გვერდით)
+const movieSearch = document.getElementById('movieSearch');
+const genreSelect = document.getElementById('genreSelect');
 
+// 2. ფუნქცია, რომელიც ფილტრავს JSON-იდან წამოღებულ continueMovies მასივს
+function filterMovies() {
+    const searchTerm = movieSearch.value.toLowerCase();
+    const selectedGenre = genreSelect.value;
+
+    // ფილტრაცია
+    const filtered = continueMovies.filter(movie => {
+        // ვამოწმებთ სათაურს (Search)
+        const matchesSearch = movie.title.toLowerCase().includes(searchTerm);
+        
+        // ვამოწმებთ ჟანრს (Select) - თუ "all" არის, ყველა გადის
+        const matchesGenre = selectedGenre === 'all' || 
+                            (movie.genre && movie.genre.toLowerCase() === selectedGenre.toLowerCase());
+        
+        return matchesSearch && matchesGenre;
+    });
+
+    // გაფილტრული მონაცემების ხელახალი რენდერი
+    renderContinueMovies(filtered);
+}
+
+// 3. დამხმარე ფუნქცია მხოლოდ ქვედა გრიდის დასახატად
+function renderContinueMovies(moviesList) {
+    if (!continueGrid) return;
+    
+    if (moviesList.length === 0) {
+        continueGrid.innerHTML = `<p style="color: var(--text-secondary); grid-column: 1/-1; text-align: center; padding: 50px;">
+            No movies found matching your criteria.
+        </p>`;
+        return;
+    }
+
+    continueGrid.innerHTML = moviesList.map(createMovieCard).join('');
+}
+
+// 4. მოვლენების მიბმა (Events)
+movieSearch.addEventListener('input', filterMovies);
+genreSelect.addEventListener('change', filterMovies);
+
+// 5. თქვენი არსებული renderAll-ის მცირე შესწორება
+function renderAll() {
+    sliderTrack.innerHTML = '';
+    sliderMovies.forEach((movie, index) => {
+        sliderTrack.appendChild(createMovieSlide(movie, index));
+    });
+
+    // თავდაპირველად ვხატავთ ყველა ფილმს JSON-იდან
+    renderContinueMovies(continueMovies);
+    updateSlider();
+}

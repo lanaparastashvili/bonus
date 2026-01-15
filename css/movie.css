@@ -460,3 +460,70 @@ footer {
     }
 }
 
+.filter-section {
+    position: absolute;
+    left: 70%;
+    z-index: 10;
+    top: 2%;
+
+
+}
+
+.filter-container {
+    height: 41px;
+    width:50px;
+    display: flex;
+    gap: 20px;
+
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#movieSearch, #genreSelect {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--text-secondary);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 16px;
+    outline: none;
+}
+
+#movieSearch {
+    flex: 2;
+}
+
+#genreSelect {
+    flex: 1;
+    cursor: pointer;
+}
+
+#movieSearch:focus {
+    border-color: var(--accent);
+}

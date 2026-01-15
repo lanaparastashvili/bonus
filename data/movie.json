@@ -1,133 +1,151 @@
-{
+
+    {
     "sliderMovies": [
         {
+            "id": 1,
             "title": "after the rain",
             "rating": "9.3",
             "year": "2011-2019",
             "genre": "Fantasy",
+            "description": "A poetic fantasy story about life, loss, and hope after difficult times.",
             "image": "../img/after the rain.png"
         },
         {
+            "id": 2,
             "title": "zehar",
             "rating": "8.1",
             "year": "2024",
             "genre": "Drama",
-            "gradient": "..img/5.png",
+            "description": "An emotional drama exploring human relationships and inner struggles.",
+            "gradient": "../img/5.png",
             "image": "../img/zehar.png"
         },
         {
-            "title": "",
+            "id": 3,
+            "title": "betman",
             "rating": "7.8",
             "year": "2024",
             "genre": "Romance",
+            "description": "A romantic story about unexpected love and second chances.",
             "image": "../img/1bet.png"
         },
         {
+            "id": 4,
             "title": "lion king",
             "rating": "6.8",
             "year": "2024",
             "genre": "Horror",
+            "description": "A dark reinterpretation where survival and fear rule the kingdom.",
             "image": "../img/5.png"
         },
-          {
-            "title": "godzila",
+        {
+            "id": 5,
+            "title": "godzilla",
             "rating": "8.8",
             "year": "2024",
             "genre": "Sci-Fi",
-           
+            "description": "Humanity faces destruction as a legendary creature rises again.",
             "image": "../img/6.png"
         },
-          {
+        {
+            "id": 6,
             "title": "spirited away",
             "rating": "8.8",
             "year": "2024",
-            "genre": "Sci-Fi",
-           
+            "genre": "Fantasy",
+            "description": "A magical journey through a mysterious world of spirits and wonder.",
             "image": "../img/away.jpg"
         },
         {
+            "id": 7,
             "title": "bergen",
             "rating": "8.8",
             "year": "2024",
-            "genre": "Sci-Fi",
-           
+            "genre": "Drama",
+            "description": "A powerful life story filled with music, passion, and tragedy.",
             "image": "../img/8.png"
         },
         {
+            "id": 8,
             "title": "news world",
             "rating": "8.7",
             "year": "2024",
             "genre": "Action",
-          
+            "description": "Fast-paced action in a world controlled by information and power.",
             "image": "../img/new.jpg"
         },
         {
+            "id": 9,
             "title": "grey's anatomy",
             "rating": "8.8",
             "year": "2010",
             "genre": "Thriller",
-           
+            "description": "Intense medical drama filled with personal and professional conflicts.",
             "image": "../img/grey.png"
         }
-
     ],
+
     
     "continueMovies": [
         {
-            "title": "",
+            "title": "lion king",
             "rating": "9.3",
-            "image": "../img/king.png"
+            "image": "../img/king.png",
+            "genre":"Drama"
         },
         {
-            "title": "",
+            "title": "vikings",
             "rating": "8.1",
-           
-            "image": "../img/vikings.png"
+            "image": "../img/vikings.png",
+            "genre":"Drama"
         },
         {
-            "title": "",
+            "title": "zehar",
             "rating": "7.8",
-          
-            "image": "../img/zehara.png"
+            "image": "../img/zehara.png",
+            "genre":"Drama"
         },
         {
-            "title": "",
+            "title": "greys anatomy",
             "rating": "6.8",
-           
-            "image": "../img/greys.png"
+            "image": "../img/greys.png",
+            "genre":"Drama"
         },
         {
-            "title": "",
+            "title": "bergen",
             "rating": "8.8",
-           
-            "image": "../img/bergen.png"
+            "image": "../img/bergen.png",
+            "genre":"Drama"
         },
         {
-            "title": "",
+            "title": "the courier",
             "rating": "7.2",
-            
-            "image": "../img/cou.png"
+            "image": "../img/cou.png",
+            "genre":"Drama"
         },
         {
-            "title": "",
+            "title": "the marks man",
             "rating": "8.7",
             "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
-            "image": "../img/marksman.png"
-        },
-            {
-            "title": "Spider-Man",
-            "rating": "8.7",
-            "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
-            "image": "../img/wana.png"
+            "image": "../img/marksman.png",
+            "genre":"Action"
         },
         {
-            "title": "",
+            "title": "wonda wision",
+            "rating": "8.7",
+            "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
+            "image": "../img/wana.png",
+            "genre":"Action"
+        },
+    
+        {
+            "title": "zack snyder's justice league",
             "rating": "7.4",
-          
+            "genre":"Action",
             "image": "../img/batman.png"
         },
         {
-            "title": "",
+            "title": "attack on titan",
             "rating": "9.3",
             "year": "2011-2019",
             "genre": "Fantasy",
