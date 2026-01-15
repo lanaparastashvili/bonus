@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="../css/checkout.css">
 </head>
 <body>
-    <div class="model-overlay">
-     <div class="order-modal">
-        <button class="close-btn" onclick="closeForm()">×</button>
+    <div class="background-blur"></div>
+
+    <div class="order-modal">
+        <button class="close-btn" onclick="window.history.back()">×</button>
         <h2>ORDER</h2>
         
         <div class="success-message" id="successMessage">
@@ -82,9 +83,8 @@
 
             <button type="submit" class="purchase-btn">Purchase</button>
         </form>
-        
     </div>
-    </div>
+    
     <script src="../js/checkout.js"></script>
 </body>
 </html>

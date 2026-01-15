@@ -6,12 +6,23 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: #f0f0f0;
+            background-image: url("../img/background.png");
+            background-size: cover;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+        }
+        .background-blur{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(3, 3, 3, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: -1;
         }
 
         .order-modal {

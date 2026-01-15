@@ -291,23 +291,4 @@ function startTimer() {
 
 loadData();
 startTimer();
-const openBtn = document.getElementById('openCheckout');
-const container = document.getElementById('modalContainer');
 
-openBtn.addEventListener('click', async () => {
-    const res = await fetch('checkout.html');
-    const html = await res.text();
-
-    container.innerHTML = html;
-    document.body.style.overflow = 'hidden';
-});
-
-container.addEventListener('click', (e) => {
-    if (
-        e.target.classList.contains('overlay') ||
-        e.target.classList.contains('close-btn')
-    ) {
-        container.innerHTML = '';
-        document.body.style.overflow = '';
-    }
-});
