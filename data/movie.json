@@ -87,69 +87,78 @@
 
     
     "continueMovies": [
-        {
-            "title": "lion king",
-            "rating": "9.3",
-            "image": "../img/king.png",
-            "genre":"Drama"
-        },
-        {
-            "title": "vikings",
-            "rating": "8.1",
-            "image": "../img/vikings.png",
-            "genre":"Drama"
-        },
-        {
-            "title": "zehar",
-            "rating": "7.8",
-            "image": "../img/zehara.png",
-            "genre":"Drama"
-        },
-        {
-            "title": "greys anatomy",
-            "rating": "6.8",
-            "image": "../img/greys.png",
-            "genre":"Drama"
-        },
-        {
-            "title": "bergen",
-            "rating": "8.8",
-            "image": "../img/bergen.png",
-            "genre":"Drama"
-        },
-        {
-            "title": "the courier",
-            "rating": "7.2",
-            "image": "../img/cou.png",
-            "genre":"Drama"
-        },
-        {
-            "title": "the marks man",
-            "rating": "8.7",
-            "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
-            "image": "../img/marksman.png",
-            "genre":"Action"
-        },
-        {
-            "title": "wonda wision",
-            "rating": "8.7",
-            "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
-            "image": "../img/wana.png",
-            "genre":"Action"
-        },
-    
-        {
-            "title": "zack snyder's justice league",
-            "rating": "7.4",
-            "genre":"Action",
-            "image": "../img/batman.png"
-        },
-        {
-            "title": "attack on titan",
-            "rating": "9.3",
-            "year": "2011-2019",
-            "genre": "Fantasy",
-            "image": "../img/titan.png"
-        }
+      {
+    "title": "lion king",
+    "rating": "9.3",
+    "image": "../img/king.png",
+    "genre": "Drama",
+    "description": "A dark reinterpretation where survival and fear rule the kingdom."
+},
+{
+    "title": "vikings",
+    "rating": "8.1",
+    "image": "../img/vikings.png",
+    "genre": "Drama",
+    "description": "Epic saga of legendary Norse heroes and their brutal conquests across Europe."
+},
+{
+    "title": "zehar",
+    "rating": "7.8",
+    "image": "../img/zehara.png",
+    "genre": "Drama",
+    "description": "An emotional drama exploring human relationships and inner struggles."
+},
+{
+    "title": "greys anatomy",
+    "rating": "6.8",
+    "image": "../img/greys.png",
+    "genre": "Drama",
+    "description": "Intense medical drama filled with personal and professional conflicts."
+},
+{
+    "title": "bergen",
+    "rating": "8.8",
+    "image": "../img/bergen.png",
+    "genre": "Drama",
+    "description": "A powerful life story filled with music, passion, and tragedy."
+},
+{
+    "title": "the courier",
+    "rating": "7.2",
+    "image": "../img/cou.png",
+    "genre": "Drama",
+    "description": "A gripping Cold War spy thriller based on incredible true events."
+},
+{
+    "title": "the marks man",
+    "rating": "8.7",
+    "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
+    "image": "../img/marksman.png",
+    "genre": "Action",
+    "description": "A skilled marksman must protect a young boy from a deadly cartel."
+},
+{
+    "title": "wonda wision",
+    "rating": "8.7",
+    "gradient": "linear-gradient(135deg, #ff0844 0%, #000000 100%)",
+    "image": "../img/wana.png",
+    "genre": "Action",
+    "description": "Two super-powered beings living their ideal suburban lives begin to suspect everything is not as it seems."
+},
+{
+    "title": "zack snyder's justice league",
+    "rating": "7.4",
+    "genre": "Action",
+    "image": "../img/batman.png",
+    "description": "Earth's greatest heroes unite to defend humanity from an apocalyptic threat."
+},
+{
+    "title": "attack on titan",
+    "rating": "9.3",
+    "year": "2011-2019",
+    "genre": "Fantasy",
+    "image": "../img/titan.png",
+    "description": "Humanity fights for survival against giant humanoid creatures behind massive walls."
+}
     ]
 }

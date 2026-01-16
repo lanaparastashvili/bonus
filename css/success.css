@@ -79,3 +79,22 @@ p {
 .save-btn:hover {
   background-color: #a00000;
 }
+@media (max-width: 480px) {
+    .modal-card {
+        padding: 30px 20px; 
+    }
+
+    h2 {
+        font-size: 20px; 
+    }
+
+    p {
+        font-size: 14px;
+        margin: 15px 0 25px;
+    }
+
+    .save-btn {
+        width: 100%; 
+        padding: 12px 0;
+    }
+}

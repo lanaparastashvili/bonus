@@ -1,4 +1,3 @@
-// ✅ success.js - სრული ვერსია
 
 const urlParams = new URLSearchParams(window.location.search);
 const movieTitle = urlParams.get('movie') || 'Unknown Movie';

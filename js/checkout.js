@@ -118,7 +118,6 @@ form.addEventListener('submit', function(e) {
             email: email.value.trim()
         };
 
-        // 2. ვიძახებთ თქვენს ფუნქციებს, რომ მონაცემები რეალურად ჩაიწეროს ბრაუზერში
         saveBookingToLocalStorage(bookingData);
         markSeatsAsTaken(bookingDate, bookingTime, selectedSeatsFromURL);
 

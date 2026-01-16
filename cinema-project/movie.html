@@ -16,7 +16,7 @@
             <div class="logo"><img src="../img/1.png" alt=""></div>
             <div class="nav-right">
                 <div class="theme-toggle" id="themeToggle"><img src="img/ag hisse.png" alt=""></div>
-             <div class="profile-icon"><img src="../img/Account.png" alt=""></div>
+             <div class="profile-icon" ><img src="../img/Account.png" alt=""></div>
             </div>
             
         </nav>
@@ -88,6 +88,42 @@
             </div>
         </div>
     </footer>
+<!-- ლოგინის Modal (footer-ის შემდეგ) -->
+<div id="loginModal" class="modal">
+    <div class="modal-content login-modal">
+        <span class="close-modal">&times;</span>
+        <div class="login-header">
+            <h1>მოგესალმებით</h1>
+            <p>შედით თქვენს ანგარიშში</p>
+        </div>
+        
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <label for="loginEmail">ელ. ფოსტა</label>
+                <input type="email" id="loginEmail" name="email" placeholder="admin@mail.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="loginPassword">პაროლი</label>
+                <input type="password" id="loginPassword" name="password" placeholder="123456" required>
+            </div>
+            
+            <div class="form-options">
+                <label class="remember-me">
+                    <input type="checkbox" name="remember">
+                    <span>დამახსოვრება</span>
+                </label>
+                <a href="#" class="forgot-password">დაგავიწყდა პაროლი?</a>
+            </div>
+            
+            <button type="submit" class="login-button">შესვლა</button>
+            
+            <div class="signup-link">
+                არ გაქვთ ანგარიში? <a href="#">რეგისტრაცია</a>
+            </div>
+        </form>
+    </div>
+</div>
     <div id="movieModal" class="modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>

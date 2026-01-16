@@ -527,3 +527,234 @@ footer {
 #movieSearch:focus {
     border-color: var(--accent);
 }
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 40%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    opacity: 0;  
+    pointer-events: none; 
+}
+.login-modal {
+    background: white;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+.login-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 60px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.forgot-password {
+    color: red;
+    text-decoration: none;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background:red;
+    color:white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    opacity: 0.9;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color:red;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* User Profile Styles */
+.user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.user-profile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.5);
+}
+
+.user-name {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* User Menu */
+.user-menu {
+    position: fixed;
+    top: 70px;
+    right: 40px;
+    background: var(--card-bg);
+    border: 1px solid var(--text-secondary);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 9999;
+    min-width: 150px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.user-menu-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.user-menu-item:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    z-index: 10000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #d63031 0%, #e17055 100%);
+}
+@media (max-width: 768px) {
+    .hero-section {
+        height: 300px;
+        padding: 0 20px 20px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .slider-section {
+        margin-top: -100px; 
+    }
+
+    .movie-slide {
+        min-width: 160px;
+        height: 240px;
+    }
+
+    .movie-slide.active {
+        transform: scale(1.1);
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .movie-card-poster {
+        height: 250px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20% auto;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

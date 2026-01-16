@@ -239,4 +239,34 @@
 
         .success-message.show {
             display: block;
-        }
+        }@media (max-width: 600px) {
+    .order-modal {
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .promo-group {
+        flex-direction: column;
+    }
+
+    .apply-btn {
+        width: 100%;
+    }
+
+    .phone-group {
+        flex-direction: column;
+    }
+
+    .country-code, .phone-select {
+        flex: 1;
+        width: 100%;
+    }
+
+    .checkbox-group label {
+        font-size: 12px;
+    }
+}

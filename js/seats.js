@@ -7,14 +7,12 @@ let selectedTime = null;
 let selectedSeats = [];
 let bookedSeats = [];
 let currentSessionId = null;
-let movieTitle = ""; // ✅ ახალი
+let movieTitle = ""; 
 
 async function loadData() {
-    // ✅ URL-დან movie title-ის წაკითხვა
     const urlParams = new URLSearchParams(window.location.search);
     movieTitle = urlParams.get('movie') || 'Unknown Movie';
     
-    // Movie title-ის გამოჩენა (თუ გაქვთ HTML-ში <h1 id="movieTitle"></h1>)
     const movieTitleElement = document.getElementById('movieTitle');
     if (movieTitleElement) {
         movieTitleElement.textContent = movieTitle;
@@ -249,11 +247,9 @@ function updateBookingInfo() {
     const total = selectedSeats.length * pricePerSeat;
     purchaseBtn.textContent = `Purchase (${total}$)`;
     
-    // ✅ Purchase ღილაკს დაემატება onclick
     purchaseBtn.onclick = checkout;
 }
 
-// ✅ Checkout ფუნქცია
 function checkout() {
     if (selectedSeats.length === 0) {
         alert("Please select at least one seat!");
@@ -289,6 +285,17 @@ function startTimer() {
 }
 
 
+
 loadData();
 startTimer();
 
+
+document.getElementById('logoButton').addEventListener('click', function() {
+    window.location.href = '../cinema-project/movie.html';
+});const logo = document.querySelector('.logo');
+if (logo) {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', () => {
+        window.location.href = 'movie.html';
+    });
+}
