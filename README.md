@@ -12,7 +12,7 @@ This platform provides a seamless user experience for cinema enthusiasts. It fea
 - [x] **Booking Integration:** Direct link to a seat selection page (`seats.html`) with movie title parameters.
 - [x] **Theme Toggle:** Fully functional Dark and Light mode support.
 - [x] **Responsive Grid System:** A flexible layout that adapts to mobile, tablet, and desktop screens.
-- [x] **JSON Data Integration:** Centralized data management using a `movie.json` file for easy updates.
+- [x] **JSON Data Integration:** Centralized data management using a `movie.json` and 'session.json' file for easy updates.
 
 ## 🛠️ Built With
 - **HTML5:** Semantic structure for better accessibility.
