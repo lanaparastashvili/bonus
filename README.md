@@ -21,6 +21,6 @@ This platform provides a seamless user experience for cinema enthusiasts. It fea
 
 ## 🚀 Live Link
 You can view the project live here:
-👉 [https://lanaparastashvili.github.io](https://lanaparastashvili.github.io)
+👉 [https://lanaparastashvili.github.io/bonus/](https://lanaparastashvili.github.io)
 ---
 *Developed by [Lana Parastashvili]*
